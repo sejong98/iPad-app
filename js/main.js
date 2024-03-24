@@ -108,6 +108,32 @@ window.addEventListener("resize", function () {
   }
 });
 
+//nav
+const navEl = document.querySelector("nav");
+const navMenuToggleEl = navEl.querySelector(".menu-toggler");
+const navMenuShadowEl = navEl.querySelector(".shadow");
+
+navMenuToggleEl.addEventListener("click", function () {
+  if (navEl.classList.contains("menuing")) {
+    hideNavMenu();
+  } else {
+    showNavMenu();
+  }
+});
+navEl.addEventListener("click", function (event) {
+  event.stopPropagation();
+});
+navMenuShadowEl.addEventListener("click", hideNavMenu);
+window.addEventListener("click", hideNavMenu);
+
+function showNavMenu() {
+  navEl.classList.add("menuing");
+}
+
+function hideNavMenu() {
+  navEl.classList.remove("menuing");
+}
+
 // //요소 가시성
 const io = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
