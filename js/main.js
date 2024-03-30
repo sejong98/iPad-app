@@ -222,3 +222,19 @@ navigations.forEach((nav) => {
 // 올해 연도를 적용!
 const thisYearEl = document.querySelector(".this-year");
 thisYearEl.textContent = new Date().getFullYear();
+
+const mapEls = document.querySelectorAll("footer .navigations .map");
+mapEls.forEach(function (el) {
+  const h3El = el.querySelector("h3");
+  h3El.addEventListener("click", function () {
+    el.classList.toggle("active");
+  });
+});
+
+// const mapEls = [...document.querySelectorAll('footer .navigations .map')]
+// mapEls.forEach(el => {
+//   const h3El = el.querySelector('h3')
+//   h3El.addEventListener('click', () => {
+//     el.classList.toggle('active')
+//   })
+// })
