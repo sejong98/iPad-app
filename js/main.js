@@ -230,11 +230,3 @@ mapEls.forEach(function (el) {
     el.classList.toggle("active");
   });
 });
-
-// const mapEls = [...document.querySelectorAll('footer .navigations .map')]
-// mapEls.forEach(el => {
-//   const h3El = el.querySelector('h3')
-//   h3El.addEventListener('click', () => {
-//     el.classList.toggle('active')
-//   })
-// })
